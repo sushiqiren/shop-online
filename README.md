@@ -1,8 +1,17 @@
-#### shop-online
+## shop-online system for listing and bidding
+
+
+### Description
+The project is to develop a web-based selling and buying system called ShopOnline. ShopOnline allows sellers to list items for selling and buyers to bid for the items based on the English Auction strategy, which is a popular strategy used in many systems such as eBay, real-estate auction. Five components (registration, login, listing, bidding, and maintenance) of ShopOnline are included for this project.
+
+
+
+### Technology used in the project
+HTML, CSS, JavaScript, PHP, DOM, XML, XMLHttpRequest, and XPath/XSLT
 
 
 ### Brief instructions on how to use the system
-When first using the system, login page should be displayed in front of customers. 
+
 	For registration and login task
 For an existing customer, the email address and password are expected and checked against the XML document. If a customer is matched against the
 information stored in the XML document, the customer information will be
@@ -32,3 +41,5 @@ auction.xml document is changed with the current bid price by the buy-it-now pri
 There are two buttons “Process Auction Items” and “Generate Report” on the middle of the browser after user clicks Maintenance Button on top right navigation menu. 
 If the “Process Auction Items” button is pressed, the system will check each item with “in_progress” status in the auction.xml document to see if it is expired by calculating the time left. If the time left is zero (or negative), then check the current bid price and reserve price to determine the status of the item (“sold” or “failed”) and change the status of the item in the auction.xml document accordingly. Once the processing is finished, a message alert will be shown to admin that the process is complete.
 If the “Generate Report” button is pressed, the system will retrieve all sold or failed items and compute the revenue (assume that system charges 3% of the sold price from each sold item and charges 1% of the reserved price from each failed item) from these items. The list of the sold or failed items (all information about the item except the description) formatted as a table will be displayed. The total number of sold and failed items and the revenue will also be displayed under the displayed table. Finally, these items will be removed from the auction.xml file. 
+
+
