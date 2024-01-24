@@ -1,0 +1,110 @@
+<!-- Filename: register.htm
+Author: Huaxing Zhang
+ID: 102078766
+Main function: HTM file for ShopOnline user to register by entering relevant input. -->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="register.js"></script>
+    <title>ShopOnline App Register</title>
+</head>
+<style>
+    /* Add CSS styles to align input boxes and add color to fonts */
+    h1 {
+        text-align: center;
+        color: blue;
+    }    
+    fieldset {
+        margin: 0 auto;
+        background-color:lightcyan;
+        width: 70%;
+    }
+    .form {
+        display: grid;
+        grid-template-columns: 180px 300px;            
+    }    
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style-type: none;
+    }
+    .attention, .error {
+        color: red;
+    }
+    .notice {
+        text-align: center;
+    }
+    li {
+        width: 300px;
+    }
+    .button {
+        width: 200px;
+    }
+    #registerdetail {
+        font-size: large;
+        text-align: center;
+    }
+    #register {
+        background-color: lightblue;
+    }    
+</style>
+<body>
+    <h1>ShopOnline</h1>
+    <ul>
+        <a href="#"><li class="menu"><button class="button">Home</button></li></a>
+        <a href="listing.htm"><li class="menu"><button class="button">Listing</button></li></a>
+        <a href="bidding.htm"><li class="menu"><button class="button">Bidding</button></li></a>
+        <a href="maintenance.htm"><li class="menu"><button class="button">Maintenance</button></li></a>
+        <a href="logout.php"><li class="menu"><button class="button">Log Out</button></li></a>
+    </ul>
+    <hr>
+    <table>
+        <p id="registerdetail">Registration Details</p>
+        <!-- fieldset element to display user input area -->
+        <fieldset>            
+            <p class="attention"><em>* Required Fields</em></p>
+            <div class="form">
+                <label for="firstname">First Name*</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <br>
+            <div class="form">
+                <label for="surname">Surname*</label>
+                <input type="text" name="surname" id="surname">
+            </div>
+            <br>
+            <div class="form">
+                <label for="email">Email*</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <br>            
+            <div class="form">
+                <label for="password">Password*</label>                    
+                <input type="password" name="password" id="password">                
+            </div>
+            <br>
+            <div class="form">
+                <label for="confirmpassword">Confirm Password*</label>                    
+                <input type="password" name="confirmpassword" id="confirmpassword">                
+            </div>
+            <br>
+            <!-- div element to display two buttons to click if user needs to register or reset -->
+            <div class="form">
+                <span></span>
+                <span>
+                    <button id="register" onclick="register();">Register</button>
+                    <button id="reset" onclick="clearFields();">Reset</button>
+                </span>                
+            </div>
+            <p>Already Registered? Please <a href="login.htm">login</a>.</p>
+            <!-- div element to display the error message -->
+            <div id="registered"></div> 
+        </fieldset>        
+    </table>        
+</body>
+</html>

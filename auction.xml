@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<items>
+  <item>
+    <customerID>4</customerID>
+    <itemID>1</itemID>
+    <itemName>Leica Q2</itemName>
+    <category>Camera</category>
+    <description>A professional camera perfect for personal use or commercial use</description>
+    <startingPrice>200</startingPrice>
+    <reservePrice>900</reservePrice>
+    <buyItNowPrice>1000</buyItNowPrice>
+    <bidPrice>200</bidPrice>
+    <duration>2023-11-21 15:04:09</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:04:09</currentTime>
+    <bidderID>4</bidderID>
+  </item>
+  <item>
+    <customerID>5</customerID>
+    <itemID>2</itemID>
+    <itemName>iPad9</itemName>
+    <category>iPad</category>
+    <description>A completely new iPad for student use or other purposes</description>
+    <startingPrice>150.50</startingPrice>
+    <reservePrice>500</reservePrice>
+    <buyItNowPrice>520</buyItNowPrice>
+    <bidPrice>150.50</bidPrice>
+    <duration>2023-11-16 20:14:20</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:08:20</currentTime>
+    <bidderID>5</bidderID>
+  </item>
+  <item>
+    <customerID>7</customerID>
+    <itemID>3</itemID>
+    <itemName>Dell Desktop</itemName>
+    <category>Computer</category>
+    <description>A fast and cool designed destop for officer or student to use</description>
+    <startingPrice>150</startingPrice>
+    <reservePrice>900</reservePrice>
+    <buyItNowPrice>1050</buyItNowPrice>
+    <bidPrice>151</bidPrice>
+    <duration>2023-11-02 11:50:50</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:15:50</currentTime>
+    <bidderID>14</bidderID>
+  </item>
+  <item>
+    <customerID>8</customerID>
+    <itemID>4</itemID>
+    <itemName>Microsoft Surface5</itemName>
+    <category>Computer</category>
+    <description>An excellent laptop for student or young people to use to study</description>
+    <startingPrice>160</startingPrice>
+    <reservePrice>950</reservePrice>
+    <buyItNowPrice>1200</buyItNowPrice>
+    <bidPrice>1200</bidPrice>
+    <duration>2023-10-22 21:24:13</duration>
+    <status>sold</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:24:13</currentTime>
+    <bidderID>9</bidderID>
+  </item>
+  <item>
+    <customerID>9</customerID>
+    <itemID>5</itemID>
+    <itemName>iPhone12</itemName>
+    <category>Phone</category>
+    <description>A relatively new iPhone produced in 2021 and can be used for daily use</description>
+    <startingPrice>250</startingPrice>
+    <reservePrice>600</reservePrice>
+    <buyItNowPrice>750</buyItNowPrice>
+    <bidPrice>250</bidPrice>
+    <duration>2023-10-23 15:39:01</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:39:01</currentTime>
+    <bidderID>9</bidderID>
+  </item>
+  <item>
+    <customerID>10</customerID>
+    <itemID>6</itemID>
+    <itemName>Samsung TV Qj5050-65</itemName>
+    <category>TV</category>
+    <description>A second hand TV with 65 inches size and beautiful design</description>
+    <startingPrice>450</startingPrice>
+    <reservePrice>790</reservePrice>
+    <buyItNowPrice>860</buyItNowPrice>
+    <bidPrice>450</bidPrice>
+    <duration>2023-10-22 15:57:27</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:47:27</currentTime>
+    <bidderID>10</bidderID>
+  </item>
+  <item>
+    <customerID>11</customerID>
+    <itemID>7</itemID>
+    <itemName>Bose Speaker H-100</itemName>
+    <category>Speaker</category>
+    <description>A very clear and good perfomance sound speaker system</description>
+    <startingPrice>150</startingPrice>
+    <reservePrice>750</reservePrice>
+    <buyItNowPrice>800</buyItNowPrice>
+    <bidPrice>150</bidPrice>
+    <duration>2023-11-02 15:50:44</duration>
+    <status>in_progress</status>
+    <currentDate>2023-10-22</currentDate>
+    <currentTime>15:51:44</currentTime>
+    <bidderID>11</bidderID>
+  </item>
+</items>

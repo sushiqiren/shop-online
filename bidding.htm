@@ -1,0 +1,120 @@
+<!-- Filename: bidding.htm
+Author: Huaxing Zhang
+ID: 102078766
+Main function: HTM file for ShopOnline user to place bid price or buy the item now. -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="bidding.js"></script>
+    <title>ShopOnline App Bidding</title>
+</head>
+<style>
+    /* Add CSS styles to align table displaying boxes and add color to fonts */
+    h1 {
+        text-align: center;
+        color: blue;
+    }    
+    fieldset {
+        margin: 0 auto;
+        background-color:lightcyan;
+        width: 50%;
+    }    
+    .form {
+        display: grid;
+        grid-template-columns: 180px 500px;
+        justify-content: center;        
+    }
+    p {
+        text-align: center;
+    }        
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style-type: none;
+    }    
+    .info {
+        color: red;
+    }
+    .bidding {
+        color: green;
+    }
+    li {
+        width: 300px;
+    }
+    .button {
+        width: 200px;
+    }        
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Additional styles for the input and button */
+    input[type="number"] {
+        width: 60%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #submit {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>ShopOnline</h1>
+    <ul>
+        <a href="#"><li class="menu"><button class="button">Home</button></li></a>
+        <a href="listing.htm"><li class="menu"><button class="button">Listing</button></li></a>
+        <a href="bidding.htm"><li class="menu"><button class="button">Bidding</button></li></a>
+        <a href="maintenance.htm"><li class="menu"><button class="button">Maintenance</button></li></a>
+        <a href="logout.php"><li class="menu"><button class="button">Log Out</button></li></a>
+    </ul>
+    <hr>
+    <div class="container">
+        <p><em>Current auction items are listed below. To place a bid for an item, use the Place Bid button.</em></p>
+        <p><em>Item remaining time and bid prices are updated every 5 seconds.</em></p>
+        <!-- div element for displaying bidding items -->
+        <div id="itemDisplay"></div>               
+    </div>
+    <!-- div element for pop up windows to place more bid prices -->
+    <div id="biddingModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Enter Bidding Price</h2>
+          <input type="number" id="bidPrice" placeholder="Enter bidding price" step="0.01" min="0" />
+          <br>
+          <button id="submit">Confirm</button>
+        </div>
+    </div>
+</body>
+</html>

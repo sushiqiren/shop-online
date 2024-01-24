@@ -1,0 +1,88 @@
+<!-- Filename: login.htm
+Author: Huaxing Zhang
+ID: 102078766
+Main function: HTM file for ShopOnline user to login to the system by entering email and password. -->
+
+<!-- set up htm file for login use -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="login.js"></script>
+    <title>ShopOnline App Login</title>
+</head>
+<style>
+    /* Add CSS styles to align form input boxes and add color to fonts */
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+    fieldset {
+        margin: 0 auto;
+        width: 70%;
+        background-color:lightcyan;
+    }
+    .form {
+        display: grid;
+        grid-template-columns: 120px 300px;            
+    }    
+    .note, .attention, .error {
+        color: red;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style-type: none;
+    }
+    .notice {
+        text-align: center;
+    }
+    li {
+        width: 300px;
+    }
+    .button {
+        width: 200px;
+    }
+      
+</style>
+<body>
+    <h1>ShopOnline</h1>
+    <ul>
+        <a href="login.htm"><li class="menu"><button class="button">Home</button></li></a>
+        <a href="listing.htm"><li class="menu"><button class="button">Listing</button></li></a>
+        <a href="bidding.htm"><li class="menu"><button class="button">Bidding</button></li></a>
+        <a href="maintenance.htm"><li class="menu"><button class="button">Maintenance</button></li></a>
+        <a href="logout.php"><li class="menu"><button class="button">Log Out</button></li></a>
+    </ul>
+    <hr>
+    <!-- set up table for user input including email and password -->
+    <table>
+        <p class="notice">Please <em>login</em> below or to register as a new user. <a href="register.htm">Register Here</a>.</p>
+        <fieldset>
+            <legend>Login Details</legend>
+            <p class="attention"><em>* Required Fields</em></p>
+            <div class="form">
+                <label for="email">Email <span class="note">*</span></label>
+                <input type="text" name="email" id="email">
+            </div>
+            <br>            
+            <div class="form">
+                <label for="password">Password <span class="note">*</span></label>                    
+                <input type="password" name="password" id="password">                
+            </div>
+            <br>
+            <div class="form">
+                <span></span>
+                <span>
+                    <button name="login" onclick="login();" id="loginButton">Login</button>
+                    <button name="reset" onclick="clearFields();">Reset</button>
+                </span>                
+            </div>
+            <!-- error message displaying -->
+            <div id="errorMsg"></div>
+        </fieldset>
+    </table>    
+</body>
+</html>

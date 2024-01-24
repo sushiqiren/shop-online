@@ -1,0 +1,136 @@
+<!-- Filename: listing.htm
+Author: Huaxing Zhang
+ID: 102078766
+Main function: HTM file for ShopOnline user to list items for bidding or buying. -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="listing.js"></script>
+    <title>ShopOnline App Listing</title>
+</head>
+<style>
+    /* Add CSS styles to align table input boxes and add color to fonts */
+    h1 {
+        text-align: center;
+        color: blue;
+    }    
+    fieldset {
+        margin: 0 auto;
+        background-color:lightcyan;
+        width: 70%;
+    }
+    .form {
+        display: grid;
+        grid-template-columns: 180px 500px;            
+    }        
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style-type: none;
+    }
+    .attention, .error {
+        color: red;
+    }
+    .notice {
+        text-align: center;
+    }
+    li {
+        width: 300px;
+    }
+    .button {
+        width: 200px;
+    }
+    #listdetail {
+        font-size: large;
+        text-align: center;
+    }
+    #register {
+        background-color: lightblue;
+    }
+    input[type="number"] {
+        width: 80px;
+    }
+</style>
+<body>
+    <h1>ShopOnline</h1>
+    <ul>
+        <!-- main buttons for user to list items or bidding and buying items, or maintaining the auction items, and log out of system -->
+        <a href="#"><li class="menu"><button class="button">Home</button></li></a>
+        <a href="listing.htm"><li class="menu"><button class="button">Listing</button></li></a>
+        <a href="bidding.htm"><li class="menu"><button class="button">Bidding</button></li></a>
+        <a href="maintenance.htm"><li class="menu"><button class="button">Maintenance</button></li></a>
+        <a href="logout.php"><li class="menu"><button class="button">Log Out</button></li></a>
+    </ul>
+    <hr>
+    <!-- table element to list the items to be placed auction or bought instantly by user input-->
+    <table>
+        <p id="listdetail"><em>To Create a listing, enter listing details below.</em></p>
+        <fieldset>
+            <legend>Seller Details</legend>            
+            <p class="attention"><em>* Required Fields</em></p>
+            <div class="form">
+                <label for="name">Item Name*</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <br>
+            <div class="form">
+                <label for="category">Category*</label>
+                <select name="category" id="category" onchange="setNewCategory();">                    
+                </select>                
+            </div>
+            <div id="newCategoryInput" style="display: none;">                
+                <label for="newCategory">New Category*</label>
+                <input type="text" name="newCategory" id="newCategory">
+            </div>
+            <br>
+            <div class="form">
+                <label for="description">Description*</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <br>            
+            <div class="form">
+                <label for="startprice">Start Price* AUD$</label>
+                <input type="number" id="startprice" name="startprice" step="0.01" min="0" value="0.00">                
+            </div>
+            <br>
+            <div class="form">
+                <label for="reserveprice">Reserve Price* AUD$</label>
+                <input type="number" id="reserveprice" name="reserveprice" step="0.01" min="0">           
+            </div>
+            <br>
+            <div class="form">
+                <label for="buyprice">Buy It Now Price* AUD$</label>
+                <input type="number" id="buyprice" name="buyprice" step="0.01" min="0">                
+            </div>
+            <br>
+            <div class="form">
+                <label for="duration">Duration*</label>
+                <span>
+                    <input type="number" id="day" name="day" step="1" min="0" placeholder="Day">
+                    &nbsp;Day(s),&nbsp;
+                    <input type="number" id="hour" name="hour" step="1" min="0" max="23" placeholder="Hour">
+                    &nbsp;Hour(s),&nbsp;
+                    <input type="number" id="minute" name="minute" step="1" min="0" max="59" placeholder="Min">
+                    Minute(s)                    
+                </span>                
+            </div>
+            <br>
+            <!-- div element for listing the items by clicking listing button or reset the listing by clicking Reset button -->
+            <div class="form">
+                <span></span>
+                <span>
+                    <button id="register" onclick="list();">Listing</button>
+                    &nbsp;&nbsp;
+                    <button id="reset" onclick="clearListing();">Reset</button>
+                </span>                
+            </div>
+            <!-- div element for error message -->
+            <div id="listed"></div>
+        </fieldset>
+    </table>
+</body>
+</html>
