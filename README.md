@@ -42,4 +42,7 @@ There are two buttons “Process Auction Items” and “Generate Report” on t
 If the “Process Auction Items” button is pressed, the system will check each item with “in_progress” status in the auction.xml document to see if it is expired by calculating the time left. If the time left is zero (or negative), then check the current bid price and reserve price to determine the status of the item (“sold” or “failed”) and change the status of the item in the auction.xml document accordingly. Once the processing is finished, a message alert will be shown to admin that the process is complete.
 If the “Generate Report” button is pressed, the system will retrieve all sold or failed items and compute the revenue (assume that system charges 3% of the sold price from each sold item and charges 1% of the reserved price from each failed item) from these items. The list of the sold or failed items (all information about the item except the description) formatted as a table will be displayed. The total number of sold and failed items and the revenue will also be displayed under the displayed table. Finally, these items will be removed from the auction.xml file. 
 
+## 🤝 Contributing
+### Submit a pull request
 
+If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
